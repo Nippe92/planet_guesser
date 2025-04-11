@@ -4,3 +4,4 @@ flask-sqlalchemy
 seaborn
 matplotlib
 numpy
+scipy

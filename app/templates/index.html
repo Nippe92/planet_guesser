@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Guesser</title>
+</head>
+<body>
+    <h1>Planet Guesser</h1>
+    <form action="/" method="POST">
+        <label for="radius">Radie:</label>
+        <input type="number" id="radius" name="radius_km" step="any" required><br>
+
+        <label for="mass">Massa:</label>
+        <input type="number" id="mass" name="mass_10^24kg" step="any" required><br>
+
+        <label for="orbital_period">Omloppstid:</label>
+        <input type="number" id="orbital_period" name="orbital_period_days" step="any" required><br>
+
+        <label for="temperature">Temperatur:</label>
+        <input type="number" id="temperature" name="temperature_avg_c" step="any" required><br>
+
+        <button type="submit">Gissa planet</button>
+    </form>
+
+    {% if planet %}
+        <h2>Resultat: {{ planet }}</h2>
+    {% endif %}
+</body>
+</html>
